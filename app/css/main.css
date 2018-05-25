@@ -70,6 +70,4 @@ h1 {
   text-align: center; }
 
 body {
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d3f4ff+0,d3ffe7+28,fdeaff+43,f5ffcc+66,e8ffff+100 */
-  background: #333;
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d3f4ff', endColorstr='#e8ffff',GradientType=1 ); }
+  background: #333; }
