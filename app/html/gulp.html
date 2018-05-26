@@ -35,20 +35,105 @@
 			<div style="background-image: url(../img/gulp/gulp.jpg);" data-category="cblock--managing"></div>
 			<h1>GULP</h1>
 		</div>
-		<div class="header__back-button">
+		<a class="header__back-button">
 			<i class="fa fa-long-arrow-left" aria-hidden="true"></i>
 			<span>Back</span>
-		</div>
+		</a>
 		<div class="header__navblocks">
 			<!-- Generating zone -->
 		</div>
 	</header>
 	<section class="main main--subpage">
-		
+		<div class="subpage-module subpage-module--description">
+			<div class="subpage-module__title">
+				<i class="fa fa-info-circle" aria-hidden="true"></i>
+				<h1>Описание</h1>
+			</div>
+			<div class="subpage-module__content">
+				<p>Gulp — это таск-менеджер для автоматического выполнения часто используемых задач (например, минификации, тестирования, объединения файлов), написанный на языке программирования JavaScript. Программное обеспечение использует командную строку для запуска задач, определённых в файле Gulpfile[2]. Создан как ответвление от проекта Grunt, чтоб взять из него лучшие практики[3]. Распространяется через менеджер пакетов NPM под MIT лицензией[4].</p>
+			</div>
+			<h3></h3>
+		</div>
+		<div class="subpage-module subpage-module--references">
+			<div class="subpage-module__title">
+				<i class="fa fa-link" aria-hidden="true"></i>
+				<h1>Ссылки / Ресурсы</h1>
+			</div>
+			<div class="subpage-module__content">
+				<ul>
+					<li><a href="https://gulpjs.com/">Official link</a></li>
+					<li><a href="https://www.youtube.com/watch?v=vW51JUVT66w">Gulp для самых маленьких (WebDesignMaster)</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="subpage-module subpage-module--main">
+			<div class="subpage-module__title">
+				<i class="fa fa-american-sign-language-interpreting" aria-hidden="true"></i>
+				<h1>FAQ</h1>
+			</div>
+			<div class="subpage-module__content">
+				<div class="subpage-faqbox">
+					<div class="subpage-faqbox__title"><h2>Установка</h2></div>
+					<div class="subpage-faqbox__content">
+						<pre><code>
+	sudo npm i -g
+	sudo npm i gulp -g
+						</code></pre>
+					</div>
+				</div>
+				<div class="subpage-faqbox">
+					<div class="subpage-faqbox__title"><h2>Пример Gulpfile.js</h2></div>
+					<div class="subpage-faqbox__content">
+						<pre><code>
+	var 	gulp           = require('gulp'),
+	sass           = require('gulp-sass'),
+	browserSync    = require('browser-sync'),
+	autoprefixer   = require('gulp-autoprefixer'),
+	notify         = require("gulp-notify");
+
+
+	// Пользовательские скрипты проекта
+
+	gulp.task('browser-sync', function() {
+		browserSync({
+			server: {
+				baseDir: 'app'
+			},
+			notify: false,
+			// tunnel: true,
+			// tunnel: "projectmane", //Demonstration page: http://projectmane.localtunnel.me
+		});
+	});
+
+	gulp.task('sass', function() {
+		return gulp.src('app/sass/**/*.sass')
+		.pipe(sass({outputStyle: 'expand'}).on("error", notify.onError()))
+		//.pipe(rename({suffix: '.min', prefix : ''}))
+		.pipe(autoprefixer(['last 15 versions']))
+		//.pipe(cleanCSS()) // Опционально, закомментировать при отладке
+		.pipe(gulp.dest('app/css'))
+		.pipe(browserSync.reload({stream: true}));
+	});
+
+	gulp.task('watch', ['sass', 'browser-sync'], function() {
+		gulp.watch('app/sass/**/*.sass', ['sass']);
+		gulp.watch(['libs/**/*.js', 'app/**/*.js'], browserSync.reload);
+		gulp.watch('app/**/*.html', browserSync.reload);
+	});
+
+	gulp.task('default', ['watch']);
+					</code></pre>
+					</div>
+				</div>
+			</div>
+		</div>
 	</section>
 	<link rel="stylesheet" href="../libs/bootstrap-grid/bootstrap-grid.css">
 	<link rel="stylesheet" href="../css/main.css">
 	<script src="../js/scripts.js"></script>
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/qtcreator_dark.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
 	<script src="../js/content.js"></script>
 	<script src="../js/common.js"></script>
 

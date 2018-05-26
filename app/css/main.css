@@ -2280,6 +2280,7 @@ body {
   height: auto; }
 
 body {
+  color: #333;
   background: #fff;
   height: 100vh; }
   body .header {
@@ -2316,6 +2317,7 @@ body {
               justify-content: center; }
       body .header__logo h1 {
         margin: 0;
+        color: #333;
         letter-spacing: 15px;
         text-transform: uppercase;
         margin-right: -15px;
@@ -2333,6 +2335,7 @@ body {
           -ms-flex-align: center;
               align-items: center;
       justify-items: end;
+      color: #333;
       grid-template-columns: repeat(20, 1fr); }
       body .header__navblocks div {
         cursor: pointer;
@@ -2404,7 +2407,10 @@ body {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 10px 30px; }
+  padding: 10px 100px; }
+
+.body--subpage .header__logo h1 {
+  color: tomato; }
 
 .body--subpage .header__logo div {
   width: 70px;
@@ -2419,6 +2425,8 @@ body {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  text-decoration: none;
+  color: #333;
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
@@ -2435,3 +2443,39 @@ body {
   .body--subpage .header__back-button span {
     font-size: 20px;
     text-transform: uppercase; }
+
+.body--subpage .main--subpage {
+  display: grid;
+  grid-template-areas: "des ref" "main main";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-column-gap: 90px;
+  padding: 40px 100px; }
+  .body--subpage .main--subpage .subpage-module--references {
+    grid-area: ref; }
+  .body--subpage .main--subpage .subpage-module--description {
+    grid-area: des; }
+  .body--subpage .main--subpage .subpage-module--main {
+    grid-area: main; }
+  .body--subpage .main--subpage .subpage-module {
+    margin-bottom: 40px; }
+    .body--subpage .main--subpage .subpage-module__title {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .body--subpage .main--subpage .subpage-module__title i {
+        margin-right: 20px;
+        font-size: 30px; }
+      .body--subpage .main--subpage .subpage-module__title h1 {
+        margin: 0; }
+    .body--subpage .main--subpage .subpage-module__content ul {
+      padding-left: 20px; }
+    .body--subpage .main--subpage .subpage-module__content p {
+      font-weight: lighter; }
+    .body--subpage .main--subpage .subpage-module__content .subpage-faqbox__title {
+      text-decoration: underline; }

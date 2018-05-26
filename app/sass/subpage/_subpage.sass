@@ -4,8 +4,10 @@
 			&--subpage
 				justify-content: space-between
 				align-items: center
-				padding: 10px 30px
+				padding: 10px 100px
 			&__logo
+				h1 
+					color: tomato
 				div 
 					width: 70px	
 					height: 70px
@@ -14,6 +16,8 @@
 					margin-right: 20px
 			&__back-button
 				display: flex
+				text-decoration: none
+				color: #333
 				align-items: center
 				cursor: pointer
 				transition: 0.3s
@@ -27,4 +31,33 @@
 					text-transform: uppercase
 		.main
 			&--subpage
-				
+				display: grid 
+				grid-template-areas: "des ref""main main"
+				grid-template-columns: 1fr 1fr
+				grid-template-rows: 1fr 1fr
+				grid-column-gap: 90px	
+				padding: 40px 100px
+				.subpage-module--references
+					grid-area: ref
+				.subpage-module--description
+					grid-area: des 
+				.subpage-module--main
+					grid-area: main
+				.subpage-module
+					margin-bottom: 40px
+					&__title
+						display: flex
+						align-items: center
+						i 
+							margin-right: 20px
+							font-size: 30px
+						h1
+							margin: 0
+					&__content
+						ul 
+							padding-left: 20px
+						p
+							font-weight: lighter
+						.subpage-faqbox
+							&__title
+								text-decoration: underline
