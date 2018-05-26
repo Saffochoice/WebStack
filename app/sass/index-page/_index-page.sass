@@ -1,84 +1,84 @@
 body 
-	background: #fff
-	&.body--index
-		height: 100vh
-		//overflow: hidden
-	.header
-		width: 100%
-		height: 90px
-		background-color: #efefef
-		padding: 10px 20px
-		box-shadow: 0px 2px 18px -5px rgba(153,153,153,1)
-		display: flex
-		justify-content: center
-		&__logo
-			//margin-right: 40px
-			display: flex
-			flex-basis: 100px	
-			width: 100%
-			align-items: center
-			justify-content: center
-			h1
-				margin: 0
-				letter-spacing: 15px
-				text-transform: uppercase
-				margin-right: -15px
-  			text-align: right
-			i 
-				font-size: 60px
-				margin-right: 20px
-				margin-left: 20px
-		&__navblocks
-			width: 90%
-			display: none
-			grid-gap: 0
-			align-items: center
-			justify-items: end
-			grid-template-columns: repeat(20,1fr)
-			div
-				cursor: pointer
-				&.selected, &:hover
-					box-shadow: 0px 2px 18px -5px rgba(153,153,153,1)
-					border: 5px double black
-				width: 50px
-				height: 50px
-				margin: 5px
-				border-radius: 50%
-				background-repeat: no-repeat
-				background-position: center
-				background-size: cover
-				//border: 1px solid black
-				
-	.main--index
-		height: calc(100vh - 90px)
-		padding: 20px
-		display: grid 
-		grid-row-gap: 0px
-		grid-column-gap: 80px	
-		grid-template-columns: 1fr 1fr 1fr
-		grid-template-rows: 1fr 1fr
-	.cblock
-		//display: flex
-		//border: 1px solid black
-		h2 
-			//text-align: center
-			margin: 10px 0 20px 0
-			//text-transform: uppercase
-			text-decoration: underline
-		&__items
-			display: flex
-			flex-wrap: wrap
-			align-items: center
-			//justify-content: space-around
-			div
-				cursor: pointer
-				&.selected, &:hover
-					box-shadow: 0px 2px 18px -5px rgba(153,153,153,1)
-					border: 5px double black
-				width: 75px
-				height: 75px
-				margin: 5px
-				border-radius: 50%
-				background-repeat: no-repeat
-				background-position: center
-				background-size: cover
+  background: #fff
+  height: 100vh
+
+  .header
+    width: 100%
+    height: 90px
+    background-color: #efefef
+    padding: 10px 20px
+    box-shadow: 0px 2px 18px -5px rgba(153,153,153,1)
+    display: flex
+    justify-content: center
+    &__logo
+      //margin-right: 40px
+      display: flex
+      flex-basis: 100px	
+      width: 100%
+      align-items: center
+      justify-content: center
+      h1
+        margin: 0
+        letter-spacing: 15px
+        text-transform: uppercase
+        margin-right: -15px
+        text-align: right
+      i 
+        font-size: 60px
+        margin-right: 20px
+        margin-left: 20px
+    &__navblocks
+      width: 90%
+      display: none
+      grid-gap: 0
+      align-items: center
+      justify-items: end
+      grid-template-columns: repeat(20,1fr)
+      div
+        cursor: pointer
+        &.selected, &:hover
+          box-shadow: 0px 2px 18px -5px rgba(153,153,153,1)
+          border: 5px double black
+        width: 50px
+        height: 50px
+        margin: 5px
+        border-radius: 50%
+        background-repeat: no-repeat
+        background-position: center
+        background-size: cover
+        //border: 1px solid black
+  .main	
+    height: calc(100vh - 90px)	
+    padding: 40px
+  .main--index
+    display: grid 
+    grid-row-gap: 0px
+    grid-column-gap: 80px	
+    grid-template-columns: 1fr 1fr 1fr
+    grid-template-rows: 1fr 1fr
+  .cblock
+    //display: flex
+    //border: 1px solid black
+    h2 
+      text-align: center
+      margin: 10px 0 20px 0
+      //text-transform: uppercase
+      text-decoration: underline
+    &__items
+      display: flex
+      flex-wrap: wrap
+      align-items: center
+      justify-content: center
+      //justify-content: space-around
+      div
+        cursor: pointer
+        &.selected, &:hover
+          box-shadow: 0px 2px 18px -5px rgba(153,153,153,1)
+          border: 5px double black
+        width: 75px
+        height: 75px
+        margin: 5px
+        border-radius: 50%
+        background-repeat: no-repeat
+        background-position: center
+        background-size: cover
